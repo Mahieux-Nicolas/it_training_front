@@ -1,0 +1,165 @@
+
+
+/****** général */
+body{
+
+    font-family: 'Ubuntu', sans-serif;
+}
+li{
+    list-style-type: none;
+}
+
+main{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 2em;
+
+    
+}
+
+/** head  **/
+
+.category_title{
+    background-color: #003B6F;
+    text-align:  center;
+    margin-bottom: 2em;
+    color: white;
+    margin-bottom: 2em;
+    }
+/****** partie gauche */
+
+.carte_detail{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    margin-left:5em;
+    margin-bottom: 2em;
+    position: relative;
+margin-right: 2em;
+}
+
+.left-page-detail{
+    display: flex;
+    margin-bottom: 2em;
+    flex-direction: column;
+    width: 50%;
+    text-align: justify;
+}
+
+.card_left_detail{
+    background-color: #003B6F;
+    color: white;
+    padding: 2em;
+    width: 80%;
+    margin-bottom: 2em;
+    margin-left: 4em;
+}
+
+.button-left-page-detail.btn{
+    padding: auto ;
+    background-color: white;
+    color: black;
+
+}
+
+/****** partie droite */
+
+
+.card.text-center {
+display: flex;
+justify-content: space-between;
+background: #197D8F;
+color: white;
+}
+
+
+.form-select{
+    margin-bottom: 5em;
+}
+  
+.card-body,
+.card-header{
+background-color: #003B6F;
+color: white;
+display: flex;
+justify-content:center;
+flex-direction: column;
+    }
+
+
+.btn.btn-primary, 
+.nav-link
+{
+    background-color: white;
+    color: black;   
+}
+
+.nav-pills .nav-link,
+.nav-pills .nav-link.active{
+    background-color: #197D8F;
+    margin-right: 0.5rem;
+    color: white;
+}
+.price{
+    font-size: 1.5em;
+    margin-top: -1em;
+}
+
+@media only screen and (max-width: 768px) {
+    /* styles for tablet devices */
+    main {
+     display: block;
+
+    }
+    .carte_detail {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .left-page-detail {
+        width: 100%;
+        margin-top: 0;
+    }
+    .card_left_detail {
+        width: 100%;
+        margin-left: 0;
+    }
+ 
+    li{
+        margin-left: 0;
+
+    }
+    ol{
+        margin: auto;
+        padding: 0;
+    }
+    .card.text-center {
+  
+        background: #197D8F;
+        color: white;
+        height: 50vh;
+        width: auto;
+        }
+}
+
+@media only screen and (max-width: 480px) {
+    /* styles for mobile devices */
+    .category_title {
+        font-size: 1.2em;
+    }
+    .card_left_detail {
+        padding: 1em;
+    }
+    .card.text-center {
+  
+        background: #197D8F;
+        color: white;
+        height: 50vh;
+        width: 90%;
+        }
+li{
+    padding: 1.5rem;
+    padding-right: 2em;
+}
+    
+}

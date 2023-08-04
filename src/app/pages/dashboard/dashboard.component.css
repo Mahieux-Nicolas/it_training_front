@@ -1,0 +1,78 @@
+
+:root {
+    --avatar-size: 5em;
+    --background-blue :  #003B6F; 
+    /* change this value anything, e.g., 100px, 10rem, etc. */
+  }
+  
+ 
+  .circle {
+    background-color: #ccc;
+    border-radius: 50%;
+    height: var(--avatar-size);
+    text-align: center;
+    width: 7%;
+    margin-left: auto;
+    margin-right: auto;
+   
+  }
+
+  
+  .initials {
+    font-size: calc(var(--avatar-size) / 2); /* 50% of parent */
+    line-height: 1;
+ 
+    top: calc(var(--avatar-size) / 4); /* 25% of parent */
+  }
+  .main_dash, 
+  .formation_dash,
+  .finish_formation{
+    background-color: aliceblue;
+    height: 30vh;
+    margin-left: auto;
+    margin-right: auto;
+    margin: 2em;
+    padding: 1em;
+    border-radius: 1em
+  }
+
+  h1{
+    text-align: center;
+    background-color:#003B6F;
+    color: white;
+    
+  }
+
+  .nom{
+    text-align: center;
+    
+  }
+
+ 
+  .dashboard{
+  background-color:#003B6F;
+  width: 80% ;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 2em;
+  padding-bottom: 2em;
+  border-radius: 1em;
+  
+  
+  }
+  
+  .main_dash{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .nombre, 
+  .terminee, 
+  .en_cours{
+    text-align: center;
+  
+  }
+
+  li{
+    list-style-type: none;
+  }
