@@ -1,6 +1,8 @@
 .img-it-training{
-    width: 7%;
-    height: 10%;
+
+    width: 70px;
+    height: 70px;
+
     border-radius: 100px;
 }
 
@@ -8,4 +10,18 @@
 input {
     color: rgba(0,0,0,0.5);
 
-  }
+    display: flex;
+}
+
+.navbar.navbar-expand-lg.navbar-light.bg-light{
+    border-bottom: 1px solid;
+}
+
+li{
+    margin-left: 10px;
+}
+
+form{
+    display: flex;
+}
+
