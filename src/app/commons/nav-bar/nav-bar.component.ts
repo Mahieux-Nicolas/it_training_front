@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
+
 import { FormControl } from '@angular/forms';
+
 
 @Component({
   selector: 'app-nav-bar',
@@ -8,10 +10,12 @@ import { FormControl } from '@angular/forms';
 })
 export class NavBarComponent {
 
+
   recherche = new FormControl('');
 
   onSubmit(){
 
   }
+
 
 }
