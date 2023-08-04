@@ -1,43 +1,79 @@
 <h1>Mon DashBoard</h1>
 
 <div class="circle">
-<span class="initials">NM</span>
-
+  <span class="initials">NM</span>
 </div>
-<p class="nom">nom prénom </p>
-
+<p class="nom">nom prénom</p>
 
 <section class="dashboard">
-<section class="main_dash">
-<span class="demande">Demandes de formation 
-     <p class="nombre">5</p>
-     <ul>
+  <section class="main_dash">
+    <span class="demande"
+      >Demandes de formation
+      <p class="nombre">5</p>
+      <div class="list_formation">
+        <ul>
           <li>php</li>
           <li>Symfony</li>
           <li>Azure</li>
-     </ul>
+        </ul>
+      </div>
+    </span>
+
+    <span class="salles">
+      Salles disponibles
+      <p class="nombre">5</p>
+      <p>prochaines formations</p>
+      <ul>
+        <li>SCRUM MASTER : n'a pas encore débuté</li>
+        <li>Data Scientist : Le formateur n'est pas confirmé</li>
+        <li>
+          AWS : La salle n'est pas réservée, le nombre de participants est
+          insuffisant
+        </li>
+      </ul>
+    </span>
+    <span class="occupe"
+      >Salles occupées
+      <p class="nombre">5</p>
+    </span>
+  </section>
+
+  <section class="formation_dash">
+    <span class="en_cours">Formation en cours
+     <p class="nombre">2</p>
+    <p>Avancée de la formation</p>
+    <div class="progress" role="progressbar" aria-label="Example with label" aria-valuenow="25" aria-valuemin="0" aria-valuemax="50">
+     <div class="progress-bar" style="width: 25%">25%</div>
+   </div>
+        
 </span>
-<span class="salles"> Salles disponibles 
-     <p class="nombre"> 5</p>
-</span>
-<span class="">Salles occupées
-
-     <p class="nombre">5</p>
-</span> 
- </section>
-<section class="formation_dash">
-   <span class="en_cours">Formation en cours </span>
-   <p class="nombre">2</p>
-</section>
-<section class="finish_formation">
-     <span class="terminee">Formations terminées</span>
-     <p class="nombre"> 5 </p>
-     <ol>
-          <li>Linux</li>
-          <li>PHP</li>
-     </ol>
-</section>
 
 
+    <table>
+     <tr>
+       <td><strong>Java</strong></td>
+       <td>début session</td>
+       <td>12/06/2023</td>
+     </tr>
+     <tr>
+       <td></td>
+       <td colspan="1">fin session</td>
+       <td colspan="1">01/01/2024</td>
+     </tr>
+   </table>
+  
+  </section>
+
+  <section class="finish_formation">
+    <span class="terminee">Formations terminées</span>
+    <p class="nombre">5</p>
+    <ol>
+      <li>Linux</li>
+      <li>
+        PHP
+        <p>consulter les évaluations</p>
+      </li>
+    </ol>
+  </section>
 
 </section>
