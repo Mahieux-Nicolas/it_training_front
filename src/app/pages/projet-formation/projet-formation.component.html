@@ -1,0 +1,62 @@
+<section class="projet-formation">
+  <h2>Demande de Formation</h2>
+  <form>
+    <div class="form-group">
+      <label for="intituleFormation">Intitulé de la Formation</label>
+      <input type="text" id="intituleFormation" name="intituleFormation" class="form-control" required>
+    </div>
+    <div class="form-group">
+      <label for="besoinRequis">Besoin Requis</label>
+      <input type="text" id="besoinRequis" name="besoinRequis" class="form-control" required>
+    </div>
+    <div class="form-group">
+      <label for="ajoutDocument">Ajouter un Document</label>
+      <input type="file" id="ajoutDocument" name="ajoutDocument" class="form-control-file">
+    </div>
+
+    <h3>Coordonnées de l'Entreprise</h3>
+    <div class="form-group">
+      <label for="nom">Nom</label>
+      <input type="text" id="nom" name="nom" class="form-control" required>
+    </div>
+    <div class="form-group">
+      <label for="prenom">Prénom</label>
+      <input type="text" id="prenom" name="prenom" class="form-control" required>
+    </div>
+    <div class="form-group">
+      <label for="fonction">Fonction</label>
+      <input type="text" id="fonction" name="fonction" class="form-control" required>
+    </div>
+    <div class="form-group">
+      <label for="email">Adresse Email</label>
+      <input type="email" id="email" name="email" class="form-control" required>
+    </div>
+    <div class="form-group">
+      <label for="entreprise">Entreprise</label>
+      <input type="text" id="entreprise" name="entreprise" class="form-control" required>
+    </div>
+    <div class="form-group">
+      <label for="telephone">Numéro de Téléphone</label>
+      <input type="tel" id="telephone" name="telephone" class="form-control" required>
+    </div>
+    <div class="form-group">
+      <label for="adressePostale">Adresse Postale</label>
+      <input type="text" id="adressePostale" name="adressePostale" class="form-control" required>
+    </div>
+    <div class="form-group">
+      <label for="codePostal">Code Postal</label>
+      <input type="text" id="codePostal" name="codePostal" class="form-control" required>
+    </div>
+    <div class="form-group">
+      <label for="ville">Ville</label>
+      <input type="text" id="ville" name="ville" class="form-control" required>
+    </div>
+    <div class="form-group form-check">
+      <input type="checkbox" id="noIntermediaires" name="noIntermediaires" class="form-check-input">
+      <label for="noIntermediaires" class="form-check-label">Je ne souhaite pas recevoir les intermédiaires et offres d'IT Training</label>
+    </div>
+
+    <button type="submit" class="btn btn-primary" (click)="envoyerDemande()">Envoyer la Demande</button>
+  </form>
+</section>
+

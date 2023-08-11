@@ -11,6 +11,7 @@ import { DetailFormationComponent } from './pages/detail-formation/detail-format
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 
 import { ReactiveFormsModule } from '@angular/forms';
+import { ProjetFormationComponent } from './pages/projet-formation/projet-formation.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 
     NotFoundComponent,
     DetailFormationComponent,
-    DashboardComponent
+    DashboardComponent,
+    ProjetFormationComponent
   ],
   imports: [
     BrowserModule,

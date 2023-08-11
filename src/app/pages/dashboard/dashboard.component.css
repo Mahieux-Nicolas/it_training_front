@@ -1,11 +1,11 @@
 
 :root {
     --avatar-size: 5em;
-    --background-blue :  #003B6F; 
+    --background-blue :  #003B6F;
     /* change this value anything, e.g., 100px, 10rem, etc. */
   }
-  
- 
+
+
   .circle {
     background-color: #ccc;
     border-radius: 50%;
@@ -14,17 +14,17 @@
     width: 7%;
     margin-left: auto;
     margin-right: auto;
-   
+
   }
 
-  
+
   .initials {
     font-size: calc(var(--avatar-size) / 2); /* 50% of parent */
     line-height: 1;
- 
+
     top: calc(var(--avatar-size) / 4); /* 25% of parent */
   }
-  .main_dash, 
+  .main_dash,
   .formation_dash,
   .finish_formation{
     background-color: aliceblue;
@@ -43,15 +43,15 @@
     text-align: center;
     background-color:#003B6F;
     color: white;
-    
+
   }
 
   .nom{
     text-align: center;
-    
+
   }
 
- 
+
   .dashboard{
   background-color:#003B6F;
   width: 80% ;
@@ -62,22 +62,22 @@
   border-radius: 1em;
 
   }
-  
+
   .main_dash{
     display: flex;
     justify-content: space-between;
     overflow-y: scroll;
     scrollbar-color: rebeccapurple green;
     scrollbar-width: thin;
-    
+
 
   }
 
-  .nombre, 
-  .terminee, 
+  .nombre,
+  .terminee,
   .en_cours{
     text-align: center;
-  
+
   }
 
   li{
@@ -96,7 +96,7 @@
     flex-direction: column;
   }
 
-.salles, 
+.salles,
 .list_formation,
 .occupe,
 .demande,
@@ -105,9 +105,23 @@
 }
 
 .progress{
-  width: 20%;
-  align-items: center;
-  margin-left: auto;
-  margin-right: auto;
-  
+
+    width: 50%; /* Augmenter la largeur de la barre de progression */
+    margin: 1em auto; /* Centrer la barre de progression */
+
+
+}
+
+.formation_dash {
+  background-color: aliceblue;
+  height: 30vh;
+  margin: 2em auto;
+  padding: 1em;
+  border-radius: 1em;
+  overflow-y: scroll;
+  scrollbar-color: rebeccapurple green;
+  scrollbar-width: thin;
+  display: flex; /* Ajout : Utiliser flexbox pour aligner le contenu */
+  flex-direction: column; /* Ajout : Aligner les éléments verticalement */
+  align-items: left; /* Ajout : Centrer horizontalement les éléments */
 }
