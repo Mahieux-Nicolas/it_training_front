@@ -9,7 +9,7 @@ import { NotFoundComponent } from './commons/not-found/not-found.component';
 
 import { DetailFormationComponent } from './pages/detail-formation/detail-formation.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
-=======
+
 import { ReactiveFormsModule } from '@angular/forms';
 
 
