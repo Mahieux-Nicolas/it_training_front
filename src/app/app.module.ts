@@ -9,8 +9,10 @@ import { NotFoundComponent } from './commons/not-found/not-found.component';
 
 import { DetailFormationComponent } from './pages/detail-formation/detail-formation.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
-=======
+
 import { ReactiveFormsModule } from '@angular/forms';
+import { ProjetFormationComponent } from './pages/projet-formation/projet-formation.component';
+import { ListeFormationsComponent } from './pages/liste-formations/liste-formations.component';
 
 
 @NgModule({
@@ -21,7 +23,9 @@ import { ReactiveFormsModule } from '@angular/forms';
 
     NotFoundComponent,
     DetailFormationComponent,
-    DashboardComponent
+    DashboardComponent,
+    ProjetFormationComponent,
+    ListeFormationsComponent
   ],
   imports: [
     BrowserModule,

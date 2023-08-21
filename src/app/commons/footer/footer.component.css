@@ -1,33 +1,59 @@
-
-
-.text-center.text-white{
-    background-color: #197D8F;
-
+/* Ajustez les propriétés de votre choix pour le conteneur flex */
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Au moins 100% de la vue */
 }
 
-.img-miroir{
-    width: 10%;
-    height: 10%;
+.text-center.text-white {
+  background-color: #197D8F;
 }
 
-.img-footer{
-    width: 100%;
-    border-radius: 100%;
-
+.img-miroir {
+  width: 10%;
+  height: 10%;
 }
 
-.text-left{
-    display: flex;
-    text-align: left;
+.img-footer {
+  width: 100%;
+  border-radius: 100%;
 }
 
-.logo-footer{
-    width: 5%;
+.text-left {
+  display: flex;
+  text-align: left;
 }
 
-footer{
-    position: absolute;
-    bottom: 0;
-    width: 100%;
+.logo-footer {
+  width: 5%;
+}
 
+
+/* Ajustez les marges pour le contenu du footer */
+.footer-content {
+  margin-top: 1rem;
+}
+
+/* Ajustez le style du texte du footer */
+.footer-text {
+  margin: 0;
+}
+
+#footer{
+  background-color: #197D8F;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  text-align: left;
+  padding: 1rem;
+}
+
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 500em ;
 }
