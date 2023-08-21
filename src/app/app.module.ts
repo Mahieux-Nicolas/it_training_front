@@ -12,6 +12,7 @@ import { DashboardComponent } from './pages/dashboard/dashboard.component';
 
 import { ReactiveFormsModule } from '@angular/forms';
 import { ProjetFormationComponent } from './pages/projet-formation/projet-formation.component';
+import { ListeFormationsComponent } from './pages/liste-formations/liste-formations.component';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { ProjetFormationComponent } from './pages/projet-formation/projet-format
     NotFoundComponent,
     DetailFormationComponent,
     DashboardComponent,
-    ProjetFormationComponent
+    ProjetFormationComponent,
+    ListeFormationsComponent
   ],
   imports: [
     BrowserModule,
