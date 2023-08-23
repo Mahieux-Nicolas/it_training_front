@@ -1,78 +1,127 @@
 
 :root {
-    --avatar-size: 5em;
-    --background-blue :  #003B6F; 
-    /* change this value anything, e.g., 100px, 10rem, etc. */
-  }
-  
- 
-  .circle {
-    background-color: #ccc;
-    border-radius: 50%;
-    height: var(--avatar-size);
-    text-align: center;
-    width: 7%;
-    margin-left: auto;
-    margin-right: auto;
-   
-  }
+  --avatar-size: 5em;
+  --background-blue :  #003B6F;
+  /* change this value anything, e.g., 100px, 10rem, etc. */
+}
 
-  
-  .initials {
-    font-size: calc(var(--avatar-size) / 2); /* 50% of parent */
-    line-height: 1;
- 
-    top: calc(var(--avatar-size) / 4); /* 25% of parent */
-  }
-  .main_dash, 
-  .formation_dash,
-  .finish_formation{
-    background-color: aliceblue;
-    height: 30vh;
-    margin-left: auto;
-    margin-right: auto;
-    margin: 2em;
-    padding: 1em;
-    border-radius: 1em
-  }
 
-  h1{
-    text-align: center;
-    background-color:#003B6F;
-    color: white;
-    
-  }
-
-  .nom{
-    text-align: center;
-    
-  }
-
- 
-  .dashboard{
-  background-color:#003B6F;
-  width: 80% ;
+.circle {
+  background-color: #ccc;
+  border-radius: 50%;
+  height: var(--avatar-size);
+  text-align: center;
+  width: 7%;
   margin-left: auto;
   margin-right: auto;
-  padding-top: 2em;
-  padding-bottom: 2em;
+
+}
+
+
+.initials {
+  font-size: calc(var(--avatar-size) / 2); /* 50% of parent */
+  line-height: 1;
+
+  top: calc(var(--avatar-size) / 4); /* 25% of parent */
+}
+.main_dash,
+.formation_dash,
+.finish_formation{
+  background-color: aliceblue;
+  height: 30vh;
+  margin-left: auto;
+  margin-right: auto;
+  margin: 2em;
+  padding: 1em;
   border-radius: 1em;
-  
-  
-  }
-  
-  .main_dash{
-    display: flex;
-    justify-content: space-between;
-  }
+  overflow-y: scroll;
+  scrollbar-color: rebeccapurple green;
+  scrollbar-width: thin;
+}
 
-  .nombre, 
-  .terminee, 
-  .en_cours{
-    text-align: center;
-  
-  }
+h1{
+  text-align: center;
+  background-color:#003B6F;
+  color: white;
 
-  li{
-    list-style-type: none;
-  }
+}
+
+.nom{
+  text-align: center;
+
+}
+
+
+.dashboard{
+background-color:#003B6F;
+width: 80% ;
+margin-left: auto;
+margin-right: auto;
+padding-top: 2em;
+padding-bottom: 2em;
+border-radius: 1em;
+
+}
+
+.main_dash{
+  display: flex;
+  justify-content: space-between;
+  overflow-y: scroll;
+  scrollbar-color: rebeccapurple green;
+  scrollbar-width: thin;
+
+
+}
+
+.nombre,
+.terminee,
+.en_cours{
+  text-align: center;
+
+}
+
+li{
+  list-style-type: none;
+}
+
+.list_formation{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.finish_formation{
+  display: flex;
+  flex-direction: column;
+}
+
+.salles,
+.list_formation,
+.occupe,
+.demande,
+.formation_dash{
+text-align: center;
+}
+
+.progress{
+
+  width: 50%; /* Augmenter la largeur de la barre de progression */
+  margin: 1em auto; /* Centrer la barre de progression */
+
+
+}
+
+.formation_dash {
+background-color: aliceblue;
+height: 30vh;
+margin: 2em auto;
+padding: 1em;
+border-radius: 1em;
+overflow-y: scroll;
+scrollbar-color: rebeccapurple green;
+scrollbar-width: thin;
+display: flex; /* Ajout : Utiliser flexbox pour aligner le contenu */
+flex-direction: column; /* Ajout : Aligner les éléments verticalement */
+align-items: left; /* Ajout : Centrer horizontalement les éléments */
+}

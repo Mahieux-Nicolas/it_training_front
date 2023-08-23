@@ -1,0 +1,63 @@
+
+
+.container-fluid{
+    background-color: #197D8F;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+
+}
+
+a:hover{
+    color: white;
+
+}
+a:visited{
+    color: white;
+
+}
+
+
+.btn {
+    border-color: #197D8F;
+}
+
+.btn:hover {
+    background-color: white;
+}
+
+.img-miroir{
+    width: 10%;
+    height: 10%;
+}
+
+.img-footer{
+    width: 5vh;
+    margin-left: -2.5rem;
+
+}
+
+.text-left{
+    display: flex;
+    text-align: left;
+}
+
+.logo-footer{
+    width: 5%;
+}
+
+.mt-3{
+    width: 15rem;
+    color: #fff;
+
+}
+
+
+footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+
+}

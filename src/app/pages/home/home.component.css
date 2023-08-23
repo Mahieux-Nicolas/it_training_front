@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Kaushan+Script&family=Press+Start+2P&family=Roboto&family=Ubuntu&display=swap');
+
+
+
+
+
+h2{
+    text-align: center;
+    font-size: 7em;
+    font-style: italic;
+    color: #003B6F;
+    padding: 1em 1em 0 1em;
+
+}
+
+li{
+    list-style: none;
+    margin-right: 7em;
+    padding-right: 2em;
+}
+
+a{
+    text-decoration: none;
+    color: #000;
+}
+a:hover{
+    color: #003B6F;
+}
+a:visited{
+    color: #000;
+}
+
+.ititle{
+    color: #197D8F;
+    font-size: 5rem;
+    margin-right: -1rem;
+
+}
+
+.card{
+    display: inline-block;
+    margin: 2em;
+}
+
+.card-text{
+    text-align: center;
+}
+
+.card-formation{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.presentation{
+        background-color: #EAEFF2;
+        text-align: center;
+        color: #003B6F;
+        padding: 2em;
+        height: 130vh;
+        margin: 4em 0 0 0;
+
+}
+
+.dropdown {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.btn-dropdown{
+    border-radius: 2em;
+    padding: 1em;
+    margin: 7em;
+    border: none;
+    background: #EAEFF2;
+    border: 1px solid #EAEFF2;
+}
+
+.btn-menu{
+    border-radius: 2em;
+    padding: 1em;
+    margin: 7em;
+    border: none;
+    background:  #197D8F;
+    color: white;
+}
+
+.btn-menu a{
+    color: white;
+}
+
+.icon{
+    margin: 0 0 -7px 10px;
+}
+
+
+
