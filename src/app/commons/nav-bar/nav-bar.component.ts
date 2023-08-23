@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormControl } from '@angular/forms';
 
 import { FormControl } from '@angular/forms';
 
@@ -16,6 +17,6 @@ export class NavBarComponent {
   onSubmit(){
 
   }
-
-
+  
 }
+
