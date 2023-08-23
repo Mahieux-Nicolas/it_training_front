@@ -1,6 +1,8 @@
 .img-it-training{
+
     width: 70px;
     height: 70px;
+
     border-radius: 100px;
 }
 
@@ -28,4 +30,19 @@ form{
     background-color: #fff;
     border: 1px solid rgb(219, 220, 224);
 
+
+    display: flex;
 }
+
+.navbar.navbar-expand-lg.navbar-light.bg-light{
+    border-bottom: 1px solid;
+}
+
+li{
+    margin-left: 10px;
+}
+
+form{
+    display: flex;
+}
+

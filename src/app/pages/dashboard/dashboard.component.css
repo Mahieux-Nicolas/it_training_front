@@ -1,5 +1,6 @@
 
 :root {
+
   --avatar-size: 5em;
   --background-blue :  #003B6F;
   /* change this value anything, e.g., 100px, 10rem, etc. */
@@ -29,11 +30,13 @@
 .finish_formation{
   background-color: aliceblue;
   height: 30vh;
+
   margin-left: auto;
   margin-right: auto;
   margin: 2em;
   padding: 1em;
   border-radius: 1em;
+
   overflow-y: scroll;
   scrollbar-color: rebeccapurple green;
   scrollbar-width: thin;
@@ -96,23 +99,29 @@ li{
   flex-direction: column;
 }
 
+
 .salles,
 .list_formation,
 .occupe,
 .demande,
 .formation_dash{
+
 text-align: center;
+
 }
 
 .progress{
+
 
   width: 50%; /* Augmenter la largeur de la barre de progression */
   margin: 1em auto; /* Centrer la barre de progression */
 
 
+
 }
 
 .formation_dash {
+
 background-color: aliceblue;
 height: 30vh;
 margin: 2em auto;
@@ -125,3 +134,4 @@ display: flex; /* Ajout : Utiliser flexbox pour aligner le contenu */
 flex-direction: column; /* Ajout : Aligner les éléments verticalement */
 align-items: left; /* Ajout : Centrer horizontalement les éléments */
 }
+

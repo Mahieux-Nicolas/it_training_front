@@ -9,6 +9,7 @@ import { AppComponent } from './app.component';
 import { FooterComponent } from './commons/footer/footer.component';
 import { NavBarComponent } from './commons/nav-bar/nav-bar.component';
 import { NotFoundComponent } from './commons/not-found/not-found.component';
+
 import { DetailFormationComponent } from './pages/detail-formation/detail-formation.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { FormConnexionComponent } from './pages/form-connexion/form-connexion.component';
@@ -19,14 +20,21 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CatalogueFormationsComponent } from './pages/catalogue-formations/catalogue-formations.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
+import { ReactiveFormsModule } from '@angular/forms';
+import { ProjetFormationComponent } from './pages/projet-formation/projet-formation.component';
+import { ListeFormationsComponent } from './pages/liste-formations/liste-formations.component';
+
+
 @NgModule({
   declarations: [
     AppComponent,
     FooterComponent,
     NavBarComponent,
+
     NotFoundComponent,
     DetailFormationComponent,
     DashboardComponent,
+
     FormConnexionComponent,
     FormCreationComponent,
     FormResetPasswordComponent,
@@ -42,6 +50,9 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     FormsModule,
     ReactiveFormsModule,
     NgbModule
+    ProjetFormationComponent,
+    ListeFormationsComponent
+  ],
 
   ],
   providers: [],
