@@ -24,7 +24,7 @@ const routes: Routes = [
   { path: 'formation/inscription-formation', component: FormInscrtiptionFormationComponent },
   { path: 'user/connexion', component: FormConnexionComponent},
   { path: 'user/creation', component: FormCreationComponent},
-  { path: 'user/password', component: FormResetPasswordComponent}
+  { path: 'user/password', component: FormResetPasswordComponent},
  
   {path : 'contact', component: ProjetFormationComponent},
   {path : "formations", component: ListeFormationsComponent}
