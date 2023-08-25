@@ -11,6 +11,7 @@ import { ThemeService } from 'src/app/services/theme.service';
 })
 export class HomeComponent implements OnInit{
   
+  
   // constructor(private themeService: ThemeService){
   // }
   constructor(private formationService: FormationService){
@@ -18,10 +19,18 @@ export class HomeComponent implements OnInit{
   }
   // themes: Theme[] = []
   formations: Formation [] = []
+  
 ngOnInit(): void {
   // this.themeService.getThemes().subscribe((themes) => { this.themes = themes })
   this.formationService.getFormations().subscribe((formations) => { this.formations = formations })
   
   
 }
+searchTerm: string = '';
+  searchFormations() {
+    this.formationService.searchFormationsByName(this.searchTerm)
+      .subscribe(response => {
+        this.formations = response;
+      });
+  }
 }
