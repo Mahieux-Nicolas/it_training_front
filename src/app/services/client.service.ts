@@ -1,6 +1,10 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { SessionFormation } from '../models/sessionFormation.model';
+import { Client } from '../models/client.model';
+import { Form } from '@angular/forms';
+import { Formation } from '../models/formation.model';
 
 @Injectable({
   providedIn: 'root'
@@ -15,4 +19,15 @@ export class ClientService {
     const inscriptionClientDTO = { email, password };
     return this.httpClient.post<boolean>(`${this.apiUrl}/inscriptionclient`, inscriptionClientDTO);
   }
+
+  inscriptionFormation(client: Client, sessionFormation: SessionFormation): Observable<boolean> {
+    const inscriptionFormationDTO = { client, sessionFormation };
+    return this.httpClient.post<boolean>(`${this.apiUrl}/inscriptionformation`, inscriptionFormationDTO);
+  }
+
+  getFormations(): Observable<Formation[]> {
+    return this.httpClient.get<Formation[]>(`${this.apiUrl}/formations/all`);
+  }
+
+  
 }

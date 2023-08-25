@@ -87,21 +87,21 @@
         <div class="card text-center">En présentiel ou à distance</div>
         <div class="card-body">
           <h3>Prochaine Session</h3>
-          <form>
+          <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
             <label>Lieu de formation</label>
-            <select class="form-select" aria-label="Default select example">
-              <option selected></option>
-              <option value="1">One</option>
+            <select class="form-select" id="lieuFormation" formControlName="lieuFormation" aria-label="Default select example">
+              <option *ngFor="let sessionFormation of sessionFormations">{{ sessionFormation.lieuSession }}</option>
             </select>
             <label>Session souhaitée</label>
-            <select class="form-select" aria-label="Default select example">
-              <option selected></option>
-              <option value="1">One</option>
+            <select class="form-select" id="sessionSouhaitee" formControlName="sessionSouhaitee" (change)="onSessionSelectionChange()">
+             <!--<option *ngFor="let session of sessionOptions" [value]="session.id">{{ session.nom }}</option>-->
+             <option *ngFor="let sessionFormation of sessionFormations" >{{ sessionFormation.nom_session }} {{sessionFormation.debut_session}}</option>
+ 
             </select>
-          </form>
-          <p class="price">Prix : 2700€</p>
+             <p class="price">Prix : {{ selectedSessionPrix }}€</p>
 
-          <a href="#" class="btn btn-primary">S'inscrire</a>
+            <button class="buttonForm" type="submit">S'inscrire</button>
+          </form>
         </div>
       </div>
     </div>
