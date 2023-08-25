@@ -1,7 +1,7 @@
 
 
 
-.container-fluid{
+/* .container-fluid{
     background-color: #197D8F;
     height: 30vh;
 }
@@ -63,5 +63,41 @@ footer{
     width: 100%;
 
 
+} */
+.footer {
+    background: #197D8F;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 150px;
+    padding: 0px 50px;
+    color: rgba(0,0,0,0.3);
+  }
+  .footer-links {
+    display: flex;
+    align-items: center;
+  }
+  .footer-links a {
+    color: black;
+    opacity: 0.90;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 0px 10px;
+  }
+  .small-link {
+    text-decoration: none;
+    color: white;
+    font-size: 12px;
+    transition: color 0.3s;
+}
+
+.small-link:hover {
+    color: gray; 
+}
+.btn-outline-light {
+border-color: #197D8F;
+}
+.container-links {
+    display: flex;
 }
 
