@@ -8,6 +8,8 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 })
 export class FormCreationComponent {
   userForm: FormGroup = this.formBuilder.group({
+    nom: ['', [Validators.required, Validators.minLength(2)]],
+    prenom: ['', [Validators.required, Validators.minLength(2)]],
     email: ['', [Validators.required, Validators.email]],
     password: ['', [Validators.required, Validators.minLength(2)]]
   })

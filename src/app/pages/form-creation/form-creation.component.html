@@ -38,11 +38,29 @@
 
     <div>
       <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+        <label for="email">Saisissez votre nom*
+          <input class="inputForm" type="text" formControlName="nom" required  placeholder="Dupont" id="nom" name="nom">
+          <span class="invalid" *ngIf="submitted && !form['nom'].value">
+            Le champs est vide
+         </span>
+      </label>
+      <label for="email">Saisissez votre prénom*
+        <input class="inputForm" type="text" formControlName="prenom" required  placeholder="Jean" id="prenom" name="prenom">
+        <span class="invalid" *ngIf="submitted && !form['prenom'].value">
+          Le champs est vide
+       </span>
+    </label>
         <label for="email">Saisissez votre e-mail*
             <input class="inputForm" type="email" formControlName="email" required  placeholder="@" id="email" name="email">
             <span class="invalid" *ngIf="submitted && !form['email'].value">
               Le champs est vide
            </span>
+        </label>
+        <label for="password">Saisissez votre date de naissance*
+          <input class="inputForm" type="date" formControlName="date" ngModel required id="date" name="date">
+          <span class="invalid" *ngIf="submitted && !form['date'].value">
+            Le champs est vide
+         </span>
         </label>
         <label for="password">Saisissez votre mot de passe*
           <input class="inputForm" type="password" formControlName="password" required  placeholder="****" id="password" name="password">

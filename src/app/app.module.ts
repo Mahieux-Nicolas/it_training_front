@@ -20,7 +20,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CatalogueFormationsComponent } from './pages/catalogue-formations/catalogue-formations.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
-import { ReactiveFormsModule } from '@angular/forms';
 import { ProjetFormationComponent } from './pages/projet-formation/projet-formation.component';
 import { ListeFormationsComponent } from './pages/liste-formations/liste-formations.component';
 
@@ -34,12 +33,13 @@ import { ListeFormationsComponent } from './pages/liste-formations/liste-formati
     NotFoundComponent,
     DetailFormationComponent,
     DashboardComponent,
-
     FormConnexionComponent,
     FormCreationComponent,
     FormResetPasswordComponent,
     HomeComponent,
-    CatalogueFormationsComponent
+    CatalogueFormationsComponent,
+    ProjetFormationComponent,
+    ListeFormationsComponent
   ],
   imports: [
     BrowserModule,
@@ -50,11 +50,10 @@ import { ListeFormationsComponent } from './pages/liste-formations/liste-formati
     FormsModule,
     ReactiveFormsModule,
     NgbModule
-    ProjetFormationComponent,
-    ListeFormationsComponent
+  
   ],
 
-  ],
+
   providers: [],
   bootstrap: [AppComponent]
 })
