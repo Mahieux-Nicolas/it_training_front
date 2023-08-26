@@ -12,6 +12,8 @@ import { HomeComponent } from './pages/home/home.component';
 
 import { ProjetFormationComponent } from './pages/projet-formation/projet-formation.component';
 import { ListeFormationsComponent } from './pages/liste-formations/liste-formations.component';
+import { EvaluationSessionComponent } from './pages/evaluations/evaluation-session/evaluation-session.component';
+import { EvaluationFormateurComponent } from './pages/evaluations/evaluation-formateur/evaluation-formateur.component';
 
 
 const routes: Routes = [
@@ -25,6 +27,9 @@ const routes: Routes = [
   { path: 'user/connexion', component: FormConnexionComponent},
   { path: 'user/creation', component: FormCreationComponent},
   { path: 'user/password', component: FormResetPasswordComponent},
+
+  { path: 'evaluation-session', component: EvaluationSessionComponent},
+  {path: 'evaluation-formateur', component: EvaluationFormateurComponent},
  
   {path : 'contact', component: ProjetFormationComponent},
   {path : "formations", component: ListeFormationsComponent}
