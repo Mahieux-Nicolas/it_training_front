@@ -20,7 +20,8 @@ import { CatalogueFormationsComponent } from './pages/catalogue-formations/catal
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ProjetFormationComponent } from './pages/projet-formation/projet-formation.component';
 import { ListeFormationsComponent } from './pages/liste-formations/liste-formations.component';
-import { HttpClientModule } from '@angular/common/http';
+import { AuthInterceptor } from './services/auth_intercepteur.service';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -51,7 +52,7 @@ import { HttpClientModule } from '@angular/common/http';
     HttpClientModule
   ],
 
-  providers: [],
+  providers: [{provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true}],
   bootstrap: [AppComponent]
 })
 

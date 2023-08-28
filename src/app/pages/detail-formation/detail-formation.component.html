@@ -89,13 +89,13 @@
           <h3>Prochaine Session</h3>
           <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
             <label>Lieu de formation</label>
-            <select class="form-select" id="lieuFormation" formControlName="lieuFormation" aria-label="Default select example">
+            <select class="form-select" id="lieuFormation" formControlName="lieuFormation">
               <option *ngFor="let sessionFormation of sessionFormations">{{ sessionFormation.lieuSession }}</option>
             </select>
             <label>Session souhaitée</label>
-            <select class="form-select" id="sessionSouhaitee" formControlName="sessionSouhaitee" (change)="onSessionSelectionChange()">
+            <select class="form-select" id="sessionSouhaitee" formControlName="sessionSouhaitee">
              <!--<option *ngFor="let session of sessionOptions" [value]="session.id">{{ session.nom }}</option>-->
-             <option *ngFor="let sessionFormation of sessionFormations" >{{ sessionFormation.nom_session }} {{sessionFormation.debut_session}}</option>
+             <option *ngFor="let sessionFormation of sessionFormations" >{{sessionFormation.debut_session}}</option>
  
             </select>
              <p class="price">Prix : {{ selectedSessionPrix }}€</p>

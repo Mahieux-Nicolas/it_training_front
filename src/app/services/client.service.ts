@@ -17,12 +17,12 @@ export class ClientService {
 
   inscriptionClient(email: string, password: string): Observable<boolean> {
     const inscriptionClientDTO = { email, password };
-    return this.httpClient.post<boolean>(`${this.apiUrl}/inscriptionclient`, inscriptionClientDTO);
+    return this.httpClient.post<boolean>(`${this.apiUrl}/clients/inscriptionclient`, inscriptionClientDTO);
   }
 
-  inscriptionFormation(client: Client, sessionFormation: SessionFormation): Observable<boolean> {
+  inscriptionFormation(client: Client | null, sessionFormation: SessionFormation): Observable<boolean> {
     const inscriptionFormationDTO = { client, sessionFormation };
-    return this.httpClient.post<boolean>(`${this.apiUrl}/inscriptionformation`, inscriptionFormationDTO);
+    return this.httpClient.post<boolean>(`${this.apiUrl}/clients/inscriptionformation`, inscriptionFormationDTO);
   }
 
   getFormations(): Observable<Formation[]> {

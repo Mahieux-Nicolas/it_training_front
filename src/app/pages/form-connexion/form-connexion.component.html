@@ -38,30 +38,31 @@
     
 
     <div>
-        <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
             <label for="email">Saisissez votre e-mail*
-                <input class="inputForm" type="email" formControlName="email" ngModel required  placeholder="@" id="email" name="email">
-                <span class="invalid" *ngIf="submitted && !form['email'].value">
+                <input class="inputForm" type="email"  formControlName="email" required placeholder="@" id="email" name="email">
+                <span class="invalid" *ngIf="
+                loginForm.get('email')!.errors &&
+                loginForm.get('email')!.hasError('required')">
                   Le champs est vide
                </span>
             </label>
             <label for="password">Saisissez votre mot de passe*
-              <input class="inputForm" type="password" formControlName="password" ngModel required  placeholder="****" id="password" name="password">
-              <span class="invalid" *ngIf="submitted && !form['password'].value">
+              <input class="inputForm" type="password" formControlName="password" required placeholder="****" id="password" name="password">
+              <span class="invalid" *ngIf="submitted && loginForm.controls['password'].invalid">
                 Le champs est vide
              </span>
             </label>
             <div>
               <button  class="buttonForm" type="submit">
-                <a routerLink="/user/dashboard">Se connecter</a>
+                <a>Se connecter</a>
               </button>
-              <button  class="buttonForm">Créer un compte</button>
             </div>
             <a class="password" routerLink="/user/password">Mot de passe oublié ?</a>
-        </form>
+            <a class="password" routerLink="/user/password">Créer un compte</a>
         
+        </form>
     </div>
-
     
 </body>
 
