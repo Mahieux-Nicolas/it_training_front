@@ -12,8 +12,10 @@ import { HomeComponent } from './pages/home/home.component';
 
 import { ProjetFormationComponent } from './pages/projet-formation/projet-formation.component';
 import { ListeFormationsComponent } from './pages/liste-formations/liste-formations.component';
+import { GuardienAuth } from './services/guardien_auth';
 import { EvaluationSessionComponent } from './pages/evaluations/evaluation-session/evaluation-session.component';
 import { EvaluationFormateurComponent } from './pages/evaluations/evaluation-formateur/evaluation-formateur.component';
+
 
 
 const routes: Routes = [
@@ -21,7 +23,7 @@ const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full'},
   { path: '', component: HomeComponent},
   { path: 'formation/detail', component: DetailFormationComponent },
-  { path: 'user/dashboard', component: DashboardComponent },
+  { path: 'user/dashboard', component: DashboardComponent, canActivate: [GuardienAuth]  },
 
   { path: 'formation/inscription-formation', component: FormInscrtiptionFormationComponent },
   { path: 'user/connexion', component: FormConnexionComponent},
