@@ -3,11 +3,11 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { SessionFormation } from '../models/sessionFormation.model';
 import { Client } from '../models/client.model';
-
+import { SessionFormationsClient } from '../models/sessionFormationsClient.model';
 @Injectable({
   providedIn: 'root'
 })
-export class SessionFormationService {
+export class SessionFormationsClientService {
   private apiUrl = 'http://localhost:8080';
 
   // Injection de la dépendence HttpClient
@@ -25,4 +25,7 @@ export class SessionFormationService {
     return this.httpClient.post<Client>(`${this.apiUrl}/clients/inscriptionformation`, Client);
   }
 
+  recupererSessionFormationsClient() : Observable<SessionFormationsClient>{
+    return this.httpClient.post<SessionFormationsClient>(`${this.apiUrl}/clients/inscriptionformation`, Client);
+  }
 }

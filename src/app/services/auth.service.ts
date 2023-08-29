@@ -87,15 +87,14 @@ export class AuthService {
   }
 
    
-  testenvoieclient() : string{
+  envoieClient() : Client | null{
     const clientString = localStorage.getItem('authenticatedClient');
          if (clientString !== null) {
     const client = JSON.parse(clientString);
-    console.log("CLIENT : ", client);
     return client
   } else {
     console.log("Aucune information client trouvée");
-    return "false";
+    return null;
   }
   }
 }
