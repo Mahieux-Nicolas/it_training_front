@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Categorie } from 'src/app/models/categorie.model';
 import { Formation } from 'src/app/models/formation.model';
+
 import { CategorieService } from 'src/app/services/categorie.service';
 import { FormationService } from 'src/app/services/formation.service';
 

@@ -1,3 +1,4 @@
+
 import { SessionFormation } from "./sessionFormation.model";
 export class Client{
     id! :number;
