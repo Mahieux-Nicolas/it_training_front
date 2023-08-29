@@ -1,0 +1,34 @@
+  <div>
+    <a href="">Accueil > </a>
+    <a href="">Catalogue de formations</a> >
+    <a href="">Formation détaillée</a> >
+    <a href="">Formulaire d'inscription</a>
+  </div>
+
+  <div class="title">
+    <h2>Créez votre compte</h2>
+  </div>
+ 
+
+
+
+  
+
+  <div>
+    <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+      <label for="email">Saisissez votre e-mail*
+          <input class="inputForm" type="email" formControlName="email" required  placeholder="@" id="email" name="email">
+          <span class="invalid" *ngIf="submitted && !form['email'].value">
+            Le champs est vide
+         </span>
+      </label>
+      <label for="password">Saisissez votre mot de passe*
+        <input class="inputForm" type="password" formControlName="password" required  placeholder="****" id="password" name="password">
+        <span class="invalid" *ngIf="submitted && !form['password'].value">
+          Le champs est vide
+       </span>
+      </label>
+        <button  class="buttonForm">Créer un compte</button>
+    </form>
+      
+  </div>
