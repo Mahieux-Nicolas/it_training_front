@@ -18,23 +18,7 @@
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
   </style>
-   <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const footer = document.getElementById('main-footer');
 
-            window.addEventListener('scroll', function() {
-                const footerOffsetTop = footer.offsetTop;
-                const windowHeight = window.innerHeight;
-                const scrollY = window.scrollY;
-
-                if (scrollY + windowHeight >= footerOffsetTop) {
-                    footer.classList.add('visible');
-                } else {
-                    footer.classList.remove('visible');
-                }
-            });
-        });
-    </script>
 
 
 </body>
