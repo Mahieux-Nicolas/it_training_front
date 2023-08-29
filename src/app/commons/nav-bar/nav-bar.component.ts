@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { FormControl } from '@angular/forms';
-
+import { FormationService } from 'src/app/services/formation.service';
 
 
 @Component({
@@ -11,11 +11,26 @@ import { FormControl } from '@angular/forms';
 export class NavBarComponent {
 
 
-  recherche = new FormControl('');
+  // recherche = new FormControl('');
 
-  onSubmit(){
+  // onSubmit(){
 
+  // }
+  rechercheName = new FormControl('');
+  searchTerm: string | null = '';
+  formations: any[] = [];
+
+  constructor(private formationService: FormationService) { }
+
+  onSubmit() {
+    const searchTerm = this.rechercheName.value; 
+    console.log(searchTerm);
+    this.formationService.searchFormationsByName(searchTerm)
+      .subscribe(response => {
+        console.log(response);
+        this.formations = response;
+      });
   }
-  
 }
+
 
