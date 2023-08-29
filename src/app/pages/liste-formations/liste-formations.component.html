@@ -1,3 +1,59 @@
-<section class="list-formation">
-blabla
-</section>
+<div class="category-title">
+    <h1>Formations en informatique</h1>
+</div>
+<div class="list-formation">
+    <div class="container-intro">       
+        <div class="texte-formation">
+            <p>
+                Notre gamme de formations en informatique a été soigneusement conçue pour 
+                répondre à une multitude de besoins. De la maîtrise des normes les plus importantes
+                aux technologies les plus avant-gardistes, des ateliers de pointe aux programmes de 
+                formation étalés sur plusieurs semaines, nous mettons à votre disposition une sélection étendue de près de 100 programmes 
+                conçus pour une acquisition rapide de nouvelles connaissances.
+            </p>
+            <p>
+                Au-delà de nos offres dédiées aux technologies, aux méthodes et aux métiers de l’informatique, 
+                nous étendons nos compétences en proposant également des solutions de formation dans les domaines du management,
+                 de l’efficacité professionnelle et du développement personnel."
+            </p>
+        </div>
+        <div class="img-it">
+            <img src="../../../assets/img/catalogue-texte-img.jpg" alt="image-catalogue-description">
+
+        </div>
+    </div>
+</div>
+<div class="catalogue-categorie">
+    <div class="liste-catalogue-categorie">
+        <ul *ngFor="let categorie of categories" class="listes">
+            <li>
+                <img src="../../../assets/img/fleche-removebg-preview.png" alt="petite-fleche" width="18px" height="22px">
+                <a routerLink="/formation/detail">
+                {{categorie.intitulerCategorie}}
+                </a>    
+            </li>
+        </ul>
+    </div>
+    <div class="img-de-droite">
+        <div class="grid-carte">
+            <img src="../../../assets/img/carte.png" alt="carte-de-france" width="280px" height="300px">
+        </div>
+        <div class="info-carte">
+            <ul>
+                <li>
+                    Une présence centrale qui englobe l'ensemble du territoire.
+                </li>
+                <li>
+                    <span>10 000 </span>
+                    <span> Personne formés
+                        <br>
+                        chaque années
+                    </span>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+
+
+</div>

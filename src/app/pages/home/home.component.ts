@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Categorie } from 'src/app/models/categorie.model';
 import { Formation } from 'src/app/models/formation.model';
-import { Theme } from 'src/app/models/theme.model';
+import { CategorieService } from 'src/app/services/categorie.service';
 import { FormationService } from 'src/app/services/formation.service';
-import { ThemeService } from 'src/app/services/theme.service';
 
 @Component({
   selector: 'app-home',
@@ -10,20 +10,18 @@ import { ThemeService } from 'src/app/services/theme.service';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit{
-  
-  
-  // constructor(private themeService: ThemeService){
-  // }
-  constructor(private formationService: FormationService){
+
+  constructor(private formationService: FormationService, private categorieService: CategorieService){
     
   }
-  // themes: Theme[] = []
-  formations: Formation [] = []
+
+  formations: Formation [] = [];
+  categories: Categorie [] = [];
   
 ngOnInit(): void {
   // this.themeService.getThemes().subscribe((themes) => { this.themes = themes })
-  this.formationService.getFormations().subscribe((formations) => { this.formations = formations })
-  
+  this.formationService.getFormations().subscribe((formations) => { this.formations = formations });
+  this.categorieService.getCategories().subscribe((categories) => {this.categories = categories});
   
 }
 searchTerm: string = '';

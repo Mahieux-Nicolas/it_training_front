@@ -90,7 +90,7 @@ a:visited{
 .btn-menu{
     border-radius: 2em;
     padding: 1em;
-    margin: 2em;
+    /* margin: 2em; */
     border: none;
     background:  #197D8F;
     color: white;
@@ -105,7 +105,7 @@ a:visited{
 }
 .background-image {
    
-    background-image: url('../../../assets/img/ordinateur-bureau.jpg'); /* Chemin relatif depuis styles.css */
+    background-image: url('../../../assets/img/ordinateur-bureau.jpg'); /* Chemin pour récup le backgound image styles.css */
     background-size: cover;
     background-position: center;
     width: 99%;
@@ -118,9 +118,9 @@ a:visited{
 }
 .card-grid{
     padding: 1em;
-    padding-bottom: 50px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(315px, 1fr));
+    grid-template-columns: 1fr 1fr 1fr;
+    /* grid-template-columns: repeat(auto-fit, minmax(315px, 1fr 1fr 1fr)); */
     grid-gap: 10px
   }
 
