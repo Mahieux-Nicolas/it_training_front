@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { ClientService } from 'src/app/services/client.service';
+import { Router } from '@angular/router'; // Importez Router depuis '@angular/router'
 
 @Component({
   selector: 'app-form-creation',
@@ -9,6 +10,10 @@ import { ClientService } from 'src/app/services/client.service';
 })
 export class FormCreationComponent {
   userForm: FormGroup = this.formBuilder.group({
+    nom: ['', [Validators.required, Validators.minLength(2)]],
+    prenom: ['', [Validators.required, Validators.minLength(2)]],
+    ville: ['', [Validators.required, Validators.minLength(2)]],
+    cp: ['', [Validators.required, Validators.minLength(2)]],
     email: ['', [Validators.required, Validators.email]],
     password: ['', [Validators.required, Validators.minLength(2)]]
   })
@@ -17,26 +22,31 @@ export class FormCreationComponent {
   
   constructor
   (private formBuilder:FormBuilder,
-   private clientService: ClientService
+   private clientService: ClientService,
+   private router: Router
     
     ) {}
 
     onSubmit() {
-
-      if (this.userForm.invalid) {
-        this.submitted = false;
-        return this.submitted;
-      } else {
+        this.submitted = true; 
+        if (this.userForm.invalid) {
+          return;
+        } else {
+              const nom = this.userForm.value.nom;
+        const prenom = this.userForm.value.prenom;
+        const ville = this.userForm.value.ville;
+        const cp = this.userForm.value.cp;
         const email = this.userForm.value.email;
         const password = this.userForm.value.password;
-  
-        this.clientService.inscriptionClient(email, password).subscribe(
+        console.log("TOTO : " + nom + prenom + ville + cp + email + password);
+        this.clientService.inscriptionClient(nom, prenom, ville, cp, email, password).subscribe(
           result => {
             if (result) {
-              console.log('Inscription réussie');
+              alert('Inscription réussie');
               this.submitted = true;
+              this.router.navigate(['/user/connexion']);
             } else {
-              console.log("L'inscription a échoué (déjà existant)");
+              alert("L'inscription a échoué (déjà existant)");
             }
           },
           error => {

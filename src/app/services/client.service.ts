@@ -15,14 +15,18 @@ export class ClientService {
 
   constructor(private httpClient: HttpClient) { }
 
-  inscriptionClient(email: string, password: string): Observable<boolean> {
-    const inscriptionClientDTO = { email, password };
+  inscriptionClient(nom: string, prenom : string, ville : string, cp : number, email: string, password: string): Observable<boolean> {
+    const inscriptionClientDTO = { nom, prenom, ville, cp, email, password };
     return this.httpClient.post<boolean>(`${this.apiUrl}/clients/inscriptionclient`, inscriptionClientDTO);
   }
 
   inscriptionFormation(client: Client | null, sessionFormation: SessionFormation): Observable<boolean> {
     const inscriptionFormationDTO = { client, sessionFormation };
     return this.httpClient.post<boolean>(`${this.apiUrl}/clients/inscriptionformation`, inscriptionFormationDTO);
+  }
+
+  recupererClient(id : number | undefined) : Observable<Client> {
+    return this.httpClient.get<Client>(`${this.apiUrl}/clients/`+id);
   }
 
   getFormations(): Observable<Formation[]> {

@@ -35,14 +35,17 @@ export class DetailFormationComponent {
     sessionFormation : SessionFormation | null = null;
 
     ngOnInit(): void {
-      console.log("teestavantl'heure");
       this.sessionFormationService.getSessionFormations().subscribe((sessionFormations) => { this.sessionFormations = sessionFormations })     
-      console.log(this.authService.estAuthentifier());
-      if(this.authService.estAuthentifier() == true)
-      {
-          console.log("je suis test");
-          this.client = this.authService.envoieClientAuthentifier();
-          console.log(this.client);
+  
+      console.log("Test avant l'appel à la vérification du token");
+      console.log("Token valide ?", this.authService.verifyToken());
+    
+      if (this.authService.verifyToken()) {
+        console.log("Token valide. Récupération des informations du client...");
+        this.client = this.authService.envoieClient();
+        console.log("Informations du client:", this.client);
+      } else {
+        console.log("Token invalide ou non trouvé. Pas de récupération des informations du client.");
       }
     }
 
@@ -85,7 +88,7 @@ export class DetailFormationComponent {
           return "false";
         }
       }else{
-        alert("Vous n'êtes pas identifier")
+        alert("Vous n'êtes pas identifié.")
         this.router.navigate(['/user/connexion']);
       }
      
