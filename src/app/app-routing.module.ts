@@ -32,7 +32,7 @@ const routes: Routes = [
   { path: 'evaluation-formateur', component: EvaluationFormateurComponent},
  
   {path : 'contact', component: ProjetFormationComponent},
-  {path : "formations", component: ListeFormationsComponent}
+  {path : 'categories', component: ListeFormationsComponent}
 
 
 ];
