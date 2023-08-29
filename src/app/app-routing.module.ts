@@ -15,6 +15,7 @@ import { ListeFormationsComponent } from './pages/liste-formations/liste-formati
 import { GuardienAuth } from './services/guardien_auth';
 import { EvaluationSessionComponent } from './pages/evaluations/evaluation-session/evaluation-session.component';
 import { EvaluationFormateurComponent } from './pages/evaluations/evaluation-formateur/evaluation-formateur.component';
+import { CategoriesDetailComponent } from './pages/liste-formations/categories-detail/categories-detail.component';
 
 
 
@@ -34,7 +35,9 @@ const routes: Routes = [
   { path: 'evaluation-formateur', component: EvaluationFormateurComponent},
  
   {path : 'contact', component: ProjetFormationComponent},
-  {path : "formations", component: ListeFormationsComponent}
+  {path : 'categorie', component: ListeFormationsComponent},
+  {path: 'categories/:type', component: CategoriesDetailComponent},
+  {path: 'categories/:type/:id', component: CategoriesDetailComponent}
 
 
 ];
