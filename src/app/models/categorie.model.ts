@@ -5,5 +5,4 @@ export class Categorie {
     intitulerCategorie!:string;
     description!:string;
     formations!:Formation[];
-    image!: string;
 }

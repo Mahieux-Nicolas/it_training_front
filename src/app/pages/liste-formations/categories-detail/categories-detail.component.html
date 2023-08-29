@@ -1,0 +1,24 @@
+<div  class="category-title">
+    <h1>Formations : {{ categorie.intitulerCategorie }} </h1>
+</div>
+<div class="container">   
+    <div class="container-intro">       
+      <div class="texte-formation">
+        <p>
+          {{ categorie.description }}
+          {{categorie.description}}
+        </p>
+      </div>
+    </div>
+    <div class="domaine-formations">
+        <h2>Formation inter / intra - {{categorie.intitulerCategorie}}</h2>
+        <div class="card-product"*ngFor="let formation of categorie.formations">
+            <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+            <div class="card-product-infos">
+              <h2 >{{formation.intituleFormation}}</h2>
+              <p>Product description with <strong>relevant info</strong> only.</p>
+            </div>
+        </div>          
+    </div>
+
+</div>

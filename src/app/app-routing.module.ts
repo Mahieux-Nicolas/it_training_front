@@ -12,8 +12,13 @@ import { HomeComponent } from './pages/home/home.component';
 
 import { ProjetFormationComponent } from './pages/projet-formation/projet-formation.component';
 import { ListeFormationsComponent } from './pages/liste-formations/liste-formations.component';
+
+import { GuardienAuth } from './services/guardien_auth';
 import { EvaluationSessionComponent } from './pages/evaluations/evaluation-session/evaluation-session.component';
 import { EvaluationFormateurComponent } from './pages/evaluations/evaluation-formateur/evaluation-formateur.component';
+import { CategoriesDetailComponent } from './pages/liste-formations/categories-detail/categories-detail.component';
+
+
 
 
 const routes: Routes = [
@@ -21,7 +26,7 @@ const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full'},
   { path: '', component: HomeComponent},
   { path: 'formation/detail', component: DetailFormationComponent },
-  { path: 'user/dashboard', component: DashboardComponent },
+  { path: 'user/dashboard', component: DashboardComponent, canActivate: [GuardienAuth]  },
 
   { path: 'formation/inscription-formation', component: FormInscrtiptionFormationComponent },
   { path: 'user/connexion', component: FormConnexionComponent},
@@ -29,10 +34,14 @@ const routes: Routes = [
   { path: 'user/password', component: FormResetPasswordComponent},
 
   { path: 'evaluation-session', component: EvaluationSessionComponent},
-  {path: 'evaluation-formateur', component: EvaluationFormateurComponent},
+
+  { path: 'evaluation-formateur', component: EvaluationFormateurComponent},
+
  
   {path : 'contact', component: ProjetFormationComponent},
-  {path : "formations", component: ListeFormationsComponent}
+  {path : 'categorie', component: ListeFormationsComponent},
+  {path: 'categories/:type', component: CategoriesDetailComponent},
+  {path: 'categories/:type/:id', component: CategoriesDetailComponent}
 
 
 ];

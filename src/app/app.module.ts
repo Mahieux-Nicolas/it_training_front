@@ -20,9 +20,15 @@ import { CatalogueFormationsComponent } from './pages/catalogue-formations/catal
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ProjetFormationComponent } from './pages/projet-formation/projet-formation.component';
 import { ListeFormationsComponent } from './pages/liste-formations/liste-formations.component';
-import { HttpClientModule } from '@angular/common/http';
+
+
+import { AuthInterceptor } from './services/auth_intercepteur.service';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+
 import { EvaluationSessionComponent } from './pages/evaluations/evaluation-session/evaluation-session.component';
 import { EvaluationFormateurComponent } from './pages/evaluations/evaluation-formateur/evaluation-formateur.component';
+import { CategoriesDetailComponent } from './pages/liste-formations/categories-detail/categories-detail.component';
+
 
 @NgModule({
   declarations: [
@@ -40,7 +46,8 @@ import { EvaluationFormateurComponent } from './pages/evaluations/evaluation-for
     ListeFormationsComponent,
     CatalogueFormationsComponent,
     EvaluationSessionComponent,
-    EvaluationFormateurComponent
+    EvaluationFormateurComponent,
+    CategoriesDetailComponent
   ],
 
   imports: [
@@ -55,7 +62,8 @@ import { EvaluationFormateurComponent } from './pages/evaluations/evaluation-for
     HttpClientModule
   ],
 
-  providers: [],
+
+  providers: [{provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true}],
   bootstrap: [AppComponent]
 })
 

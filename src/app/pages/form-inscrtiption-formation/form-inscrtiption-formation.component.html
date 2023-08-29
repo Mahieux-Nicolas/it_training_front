@@ -1,15 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Inscription formation</title>
-</head>
-
-<body>
-
-
-
   <div>
     <a href="">Accueil</a> >
     <a href="">Catalogue de formations</a> >
@@ -23,7 +11,7 @@
   </div>
 
   <form action="" method="post">
-    <div class="container">
+    <div class="contain">
       
       <h3>Vous êtes ?</h3>
 
@@ -55,10 +43,10 @@
         </div>
         <div>
           <label for="prenom" class="labelForm">Prénom*
-            <input class="inputForm" type="email" required placeholder="Prénom" id="email" name="email">
+            <input class="inputForm" type="email" required placeholder="Prénom" id="prenom" name="prenom">
           </label>
           <label for="email" class="labelForm">Nom*
-            <input class="inputForm" type="email" required placeholder="Nom" id="email" name="email">
+            <input class="inputForm" type="email" required placeholder="Nom" id="nom" name="nom">
           </label>
         </div>
         <div>
@@ -66,17 +54,17 @@
             <input class="inputForm" type="text" required placeholder="JJ/MM/AA" id="anniversaire" name="anniversaire">
         </label>
         <label for="lieu" class="labelForm">Lieu de naissance*
-          <input class="inputForm" type="text" required placeholder="Lieu de naissance" id="email" name="email">
+          <input class="inputForm" type="text" required placeholder="Lieu de naissance" id="naissance" name="naissance">
         </label>
         </div>
         <div class="labelForm">
           <label for="adresse">Adresse postale*
-            <input  type="email" class="inputFormLong" required placeholder="Numéro, nature et nom de la rue" id="email" name="email">
+            <input  type="email" class="inputFormLong" required placeholder="Numéro et nom de la rue" id="rue" name="rue">
           </label>
         </div>
         <div class="labelForm">
           <label for="adresse">Complément d'adresse
-            <input  type="email" class="inputFormLong" required placeholder="Résidence, appartement, etc..." id="email" name="email">
+            <input  type="email" class="inputFormLong" required placeholder="Résidence, appartement, etc..." id="complement" name="complement">
           </label>
         </div>
         <div>
@@ -97,10 +85,10 @@
         </div>
         <div>
           <label for="anniversaire" class="labelForm">Mot de passe*
-            <input class="inputForm" type="password" required placeholder="MDP">
+            <input class="inputForm" type="password" required placeholder="mot de passe">
         </label>
         <label for="lieu" class="labelForm">Confirmez votre mot de passe*
-          <input class="inputForm" type="password" required placeholder="Confirmation MDP">
+          <input class="inputForm" type="password" required placeholder="Confirmation mot de passe">
         </label>
         </div>
 
@@ -108,7 +96,7 @@
 
         <div>
           <label for="prenom" class="labelForm">Raison sociale
-            <input class="inputForm" type="email" placeholder="Raison sociale" id="email" name="email">
+            <input class="inputForm" type="email" placeholder="Raison sociale" id="mailent" name="email">
           </label>
           <label for="siret" class="labelForm">Numéro SIRET
             <input class="inputForm" type="number" placeholder="SIRET">
@@ -116,12 +104,13 @@
         </div>
         <div class="labelForm">
           <label for="adresse">Adresse postale
-            <input  type="email" class="inputFormLong" placeholder="Numéro, nature et nom de la rue" id="email" name="email">
+           
           </label>
+          <input  type="email" class="inputFormLong" placeholder="Numéro, nature et nom de la rue" id="rueEnt" name="email">
         </div>
         <div class="labelForm">
           <label for="adresse">Complément d'adresse
-            <input  type="email" class="inputFormLong" placeholder="Résidence, appartement, etc..." id="email" name="email">
+            <input  type="email" class="inputFormLong" placeholder="Résidence, appartement, etc..." id="complementEnt" name="email">
           </label>
         </div>
         <div>
@@ -149,6 +138,9 @@
 
     </div>
   </form>
+
+
+ 
 
 <!-- 
 
@@ -227,5 +219,4 @@
   </div> -->
 
 
-</body>
-</html>
+
