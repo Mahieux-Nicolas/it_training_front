@@ -29,7 +29,7 @@ const routes: Routes = [
   { path: 'user/password', component: FormResetPasswordComponent},
 
   { path: 'evaluation-session', component: EvaluationSessionComponent},
-  {path: 'evaluation-formateur', component: EvaluationFormateurComponent},
+  { path: 'evaluation-formateur', component: EvaluationFormateurComponent},
  
   {path : 'contact', component: ProjetFormationComponent},
   {path : "formations", component: ListeFormationsComponent}
