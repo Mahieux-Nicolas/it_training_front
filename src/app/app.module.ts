@@ -23,6 +23,7 @@ import { ListeFormationsComponent } from './pages/liste-formations/liste-formati
 import { HttpClientModule } from '@angular/common/http';
 import { EvaluationSessionComponent } from './pages/evaluations/evaluation-session/evaluation-session.component';
 import { EvaluationFormateurComponent } from './pages/evaluations/evaluation-formateur/evaluation-formateur.component';
+import { CategoriesDetailComponent } from './pages/liste-formations/categories-detail/categories-detail.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { EvaluationFormateurComponent } from './pages/evaluations/evaluation-for
     ListeFormationsComponent,
     CatalogueFormationsComponent,
     EvaluationSessionComponent,
-    EvaluationFormateurComponent
+    EvaluationFormateurComponent,
+    CategoriesDetailComponent
   ],
 
   imports: [

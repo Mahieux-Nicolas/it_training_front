@@ -28,7 +28,7 @@
         <ul *ngFor="let categorie of categories" class="listes">
             <li>
                 <img src="../../../assets/img/fleche-removebg-preview.png" alt="petite-fleche" width="18px" height="22px">
-                <a routerLink="/formation/detail">
+                <a routerLink="/categories/categorie/{{categorie.id}}">
                 {{categorie.intitulerCategorie}}
                 </a>    
             </li>

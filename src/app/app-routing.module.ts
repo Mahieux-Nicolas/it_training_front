@@ -14,6 +14,7 @@ import { ProjetFormationComponent } from './pages/projet-formation/projet-format
 import { ListeFormationsComponent } from './pages/liste-formations/liste-formations.component';
 import { EvaluationSessionComponent } from './pages/evaluations/evaluation-session/evaluation-session.component';
 import { EvaluationFormateurComponent } from './pages/evaluations/evaluation-formateur/evaluation-formateur.component';
+import { CategoriesDetailComponent } from './pages/liste-formations/categories-detail/categories-detail.component';
 
 
 const routes: Routes = [
@@ -32,7 +33,9 @@ const routes: Routes = [
   { path: 'evaluation-formateur', component: EvaluationFormateurComponent},
  
   {path : 'contact', component: ProjetFormationComponent},
-  {path : 'categories', component: ListeFormationsComponent}
+  {path : 'categorie', component: ListeFormationsComponent},
+  {path: 'categories/:type', component: CategoriesDetailComponent},
+  {path: 'categories/:type/:id', component: CategoriesDetailComponent}
 
 
 ];

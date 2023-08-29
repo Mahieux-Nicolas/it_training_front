@@ -61,10 +61,11 @@
 }
 .liste-catalogue-categorie a{
   text-decoration: none;
-  color: #000;
+  color: white;
+  transition: all 0.5s ease-out
 }
 .liste-catalogue-categorie a:hover{
-  color: white;
+  color: black;
 }
 .grid-carte{
   background-color: whitesmoke;

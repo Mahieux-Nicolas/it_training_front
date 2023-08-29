@@ -3,6 +3,7 @@ import { Categorie } from 'src/app/models/categorie.model';
 import { Formation } from 'src/app/models/formation.model';
 import { CategorieService } from 'src/app/services/categorie.service';
 import { FormationService } from 'src/app/services/formation.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-liste-formations',
@@ -10,7 +11,9 @@ import { FormationService } from 'src/app/services/formation.service';
   styleUrls: ['./liste-formations.component.css']
 })
 export class ListeFormationsComponent {
-  constructor(private formationService: FormationService, private categorieService: CategorieService){
+  
+  constructor(private formationService: FormationService, 
+    private categorieService: CategorieService, private router: Router){
     
   }
   formations: Formation [] = [];
@@ -24,8 +27,10 @@ export class ListeFormationsComponent {
     // méthode afin que les catégorie soit trié de manière alphabétique
     this.categorieService.getCategories().subscribe((categories) => { this.categories = categories.sort((categorie1, categorie2) => categorie1.intitulerCategorie.localeCompare
       (categorie2.intitulerCategorie));
-     });
-    
+     });  
+  }
+  categorieDetail(id: number){
+    this.router.navigate(['/categories',id]);
   }
   
 }
