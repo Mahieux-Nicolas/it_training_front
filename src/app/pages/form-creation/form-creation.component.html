@@ -1,0 +1,51 @@
+  <div>
+    <a href="">Accueil > </a>
+    <a href="">Catalogue de formations</a> >
+    <a href="">Formation détaillée</a> >
+    <a href="">Formulaire d'inscription</a>
+  </div>
+
+  <div class="title">
+    <h2>Créez votre compte</h2>
+  </div>
+ 
+  <div>
+    <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+      <label for="nom">Saisissez votre nom*
+        <input class="inputForm" type="text" formControlName="nom" required placeholder="Doe" id="nom" name="nom">
+        <span class="invalid" *ngIf="submitted && userForm.controls['nom'].hasError('required')">
+          Le champ est vide
+        </span>
+      </label>
+      <label for="prenom">Saissisez votre prenom*
+        <input class="inputForm" type="text" formControlName="prenom" required  placeholder="John" id="prenom" name="prenom">
+        <span class="invalid" *ngIf="submitted && userForm.controls['prenom'].hasError('required')">          Le champs est vide
+       </span>
+      </label>
+      <label for="ville">Saissisez votre ville*
+        <input class="inputForm" type="text" formControlName="ville" required  placeholder="Lille" id="ville" name="ville">
+        <span class="invalid" *ngIf="submitted && userForm.controls['ville'].hasError('required')">          Le champs est vide
+       </span>
+      </label>
+      <label for="cp">Saissisez votre code postale*
+        <input class="inputForm" type="text" formControlName="cp" required  placeholder="59000" id="cp" name="cp">
+        <span class="invalid" *ngIf="submitted && userForm.controls['cp'].hasError('required')">          Le champs est vide
+       </span>
+      </label>
+      <label for="email">Saisissez votre e-mail*
+          <input class="inputForm" type="email" formControlName="email" required  placeholder="@" id="email" name="email">
+          <span class="invalid" *ngIf="submitted && userForm.controls['email'].hasError('required')">            Le champs est vide
+
+         </span>
+      </label>
+      <label for="password">Saisissez votre mot de passe*
+        <input class="inputForm" type="password" formControlName="password" required  placeholder="****" id="password" name="password">
+
+       
+        <span class="invalid" *ngIf="submitted && userForm.controls['password'].hasError('required')">          Le champs est vide
+       </span>
+      </label>
+        <button  class="buttonForm">Créer un compte</button>
+    </form>
+      
+  </div>

@@ -1,0 +1,27 @@
+
+  <div class="background-image">
+    <div class="titre-home">
+
+      <h2><span class="ititle">I</span>T<span class="ititle">-</span>Training</h2>
+    </div>
+  </div>
+
+  <div class="presentation">
+
+    <h3>Trouvez la formation qui vous convient !</h3>
+    <div class="card-grid">
+      <div *ngFor="let categorie of categories; let i = index" class="card-formation">
+        <div class="card" style="width: 20rem;" *ngIf="i < 6">
+          <img src="../../../assets/img/fuji.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <a routerLink="/formation/detail"><h5 class="card-text">{{categorie.intitulerCategorie}}</h5></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="btn-menu">
+      <a routerLink="/categorie">En voir d'avantage</a>
+    </button>
+
+  </div>
+

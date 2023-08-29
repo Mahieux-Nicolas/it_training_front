@@ -1,0 +1,142 @@
+
+
+
+body{
+    font-family: 'Ubuntu', sans-serif;
+    padding-top: 2em;
+}
+h2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+h3{
+    color: #fff;
+    font-size: 27px;
+}
+h5{
+    margin-top: 2em;
+    color: #fff;
+}
+li{
+    color: #fff;
+    display: inline;
+    padding: 2em;
+}
+a{
+    text-decoration: none;
+}
+a:visited{
+    color: black;
+}
+
+
+
+/* __________FORMULAIRE__________ */
+form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+
+}
+
+
+textarea {
+    color: #EFEAEA;
+    border: 2px solid #EFEAEA;
+    border-radius: 10px;
+    width : 100%;
+    min-height : 100px;
+    max-width : 375px;
+    max-height : 300px;
+    padding: 7px;
+}
+textarea::placeholder{
+    color: #EFEAEA; 
+    padding: 10px;   
+}
+
+.contain {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 3em;
+    border: 1px solid silver;
+    background-color: #003B6F;
+    margin-top: 7em;
+    width: 70%;
+    border-radius: 7px;
+  
+}
+
+button {
+    display: flex;
+    align-content: center;
+    font-size: 17px;
+    padding: 10px;
+    margin: auto;
+    margin-top: 2EM;
+    filter: drop-shadow(0 0 0.1em silver);
+    border-radius: 10px;
+}
+button:hover {
+    background-color:#197D8F;
+    color: #EFEAEA;
+    }    
+button:active {
+    background-color:#197D8F;
+}
+
+.inputForm{
+    padding: 9px 79px 7px 10px;
+    margin: 1em 0em 0em 0em;
+    border: 1px solid #EFEAEA;
+    border-radius: 10px;
+    display: block;
+}
+.inputFormLong{
+    padding: 6px 33em 7px 10px;;
+    margin: 1em 0em 0em 0em ;
+    border: 1px solid #EFEAEA;
+    border-radius: 10px;
+
+}
+.labelForm{
+    color: #fff;
+    padding-right: 7em;
+    margin-top: 2em;
+    
+}
+.labelFormLong{
+    margin: 7em 0em 0em -30em;
+    padding: 0em 0em 0em 0em;
+    color: #fff;
+
+}
+
+
+.title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #003B6F;
+    color: #fff;
+    height: 6em;
+
+}
+.radio{
+    margin: 7px;
+    color: #fff;
+}
+
+.inline{
+    display: inline-block;
+}
+
+
+
+
+
+
+ 

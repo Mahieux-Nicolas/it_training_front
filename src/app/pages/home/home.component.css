@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Kaushan+Script&family=Press+Start+2P&family=Roboto&family=Ubuntu&display=swap');
+
+body {
+    background: beige;
+}
+
+
+
+h2{
+    text-align: center;
+    font-size: 9em;
+    font-style: italic;
+    color: #003B6F;
+
+    background-color: #98bcc22a;
+    text-shadow: 2px 2px 2px #c0daeb;
+
+}
+
+
+h3 {
+    margin-top: 2em;
+    margin-bottom: 2em;
+    color: #fff;
+}
+
+h3 {
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+li{
+    list-style: none;
+    margin-right: 7em;
+    padding-right: 2em;
+}
+
+a{
+    text-decoration: none;
+    color: #000;
+}
+a:hover{
+    color: #003B6F;
+}
+a:visited{
+    color: #000;
+}
+
+.ititle{
+    color: #197D8F;
+    font-size: 7rem;
+    margin-right: -1rem;
+
+}
+
+.card{
+    display: inline-block;
+    margin: 2em;
+}
+
+.card-text{
+    text-align: center;
+}
+
+.card-formation{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.presentation{
+        width: 93%;
+        background: linear-gradient(-45deg, #ebecec, #197D8F, #003B6F, #197D8F);
+        background-size: 400% 400%;
+        animation: gradient 15s ease infinite;
+        height: 100vh;
+        text-align: center;
+        color: #003B6F;
+        padding: 2em;
+        height: 130vh;
+        margin:0 auto;
+        margin-top: 2em;
+        margin-bottom: 2em;
+        border-radius: 1px;
+
+}
+
+.dropdown {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.btn-dropdown{
+    border-radius: 2em;
+    padding: 1em;
+    margin: 7em;
+    border: none;
+    background: #EAEFF2;
+    border: 1px solid #EAEFF2;
+}
+
+.btn-menu{
+    border-radius: 2em;
+    padding: 1em;
+    margin: 2em;
+
+    border: none;
+    background:  #fff;
+    color: #197D8F;
+}
+
+.btn-menu a{
+    color: #197D8F;
+}
+
+.icon{
+    margin: 0 0 -7px 10px;
+}
+.background-image {
+ 
+    background-image: url('../../../assets/img/ordinateur-bureau.jpg'); /* Chemin relatif depuis styles.css */
+    background-size: cover;
+    background-position: center;
+    width: 99%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    border-radius: 5px;
+}
+.card-grid{
+    padding: 1em;
+    padding-bottom: 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(315px, 1fr));
+    grid-gap: 10px
+  }
+
+
+  @keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+
+
+

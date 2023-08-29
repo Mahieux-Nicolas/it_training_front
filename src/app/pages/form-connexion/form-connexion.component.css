@@ -1,0 +1,129 @@
+h2{
+    font-size: 3rem;
+}
+
+a{
+    text-decoration: none;
+}
+a:visited{
+    color: black;
+}
+
+
+/*__________FORMULAIRE__________*/
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    background-color: #197D8F;
+    padding: 34px;
+    width: 24%;
+    border-radius: 20px;
+    margin-top: 7em;
+}
+form:active{
+    border: 1px solid #EFEAEA; 
+}
+
+textarea {
+    color: #EFEAEA;
+    background-color: #CDB1A8;
+    border: 2px solid #EFEAEA;
+    border-radius: 10px;
+    width : 100%;
+    min-height : 100px;
+    max-width : 375px;
+    max-height : 300px;
+    padding: 7px;
+}
+textarea::placeholder{
+    color: #EFEAEA; 
+    padding: 10px;   
+}
+label{
+    color: #fff;
+    text-align: center;
+    margin: 1em;
+}
+
+
+.buttonForm {
+    padding: 7px;
+    margin: 2em 1em 0em 2em;
+    color: #313756;
+    border: 1px solid #EFEAEA;
+    filter: drop-shadow(0 0 0.2rem silver);
+    border-radius: 5px;
+}
+button:hover {
+    background-color:#fff;
+    }    
+button:active {
+    background-color:#CDB1A8;
+    box-shadow:1px 1px 1px #994C4C inset;
+}
+
+.inputForm{
+    padding: 7px 130px 7px 10px;
+    background-color: #fff;
+    border: 1px solid #EFEAEA;
+    border-radius: 20px;
+    background-color: #fff;
+}
+input:active{
+    border: 2px solid white;
+}
+input[type=text]::placeholder, input[type=email]::placeholder{
+    color: gray;
+}
+
+.create{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    color: #fff;
+}
+.create::after{
+    content: "";
+    width: 0%;
+    transition: 0.7s ease-in-out;    
+}
+.create:hover{
+    color: #994C4C;
+    filter: drop-shadow(0 0 0.75rem silver);
+    
+}
+.create :hover::after{
+    content: " Créer un profil";
+    width: 40%;
+}
+.create a{
+    color: #313756;
+}
+
+.title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #003B6F;
+    color: #fff;
+    height: 6em;
+
+}
+
+.invalid {
+    color:rgb(255, 0, 0);
+    margin-bottom: 1em;
+}
+
+.password{
+    padding-top: 1em;
+    color: white !important;
+}
+
+

@@ -1,22 +1,23 @@
+
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
-      <a routerLink="/accueil"><img class="img-it-training" src="../../../assets/img/logoFilRouge.png"></a>
+      <a routerLink=""><img class="img-it-training" src="../../../assets/img/logoFilRouge.png"></a>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
           <a class="nav-link" routerLink="/formations">Formations</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link"  routerLink="/products">Espace Client</a>
+
+          <a class="nav-link"  routerLink="/user/connexion">Espace Client</a>
         </li>
       </ul> 
       <form (ngSubmit)="onSubmit()">
-        <input type="search" id="form1" class="form-control"  formControlName="recherche" name="recherche" placeholder="Rechercher...">
-        <button type="button" class="btn btn-primary m-2">
+        <input type="search" id="form1" class="form-control" [formControl]="rechercheName" name="recherche" placeholder="Rechercher...">
+        <button type="submit" class="btn btn-primary m-2">
           <img src="../../../assets/img/search.svg">
         </button>  
       </form>
-      {{recherche.value}}
     </div>
   </div>
 </nav>

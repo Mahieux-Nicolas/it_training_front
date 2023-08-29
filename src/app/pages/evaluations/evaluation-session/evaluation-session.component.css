@@ -1,0 +1,9 @@
+.container-eval-session{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: space-around;
+    flex-wrap: wrap;
+    background-color: #EAEFF2;
+
+}
