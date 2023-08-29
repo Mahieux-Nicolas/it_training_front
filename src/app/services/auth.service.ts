@@ -2,8 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Client } from '../models/client.model';
-import jwt_decode  from 'jwt-decode';
-import * as jwt from 'jsonwebtoken';
+
 
 interface ConnexionResponse {
   isAuthenticated?: boolean;

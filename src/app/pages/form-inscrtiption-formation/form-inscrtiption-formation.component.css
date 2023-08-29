@@ -15,7 +15,7 @@ h3{
     font-size: 27px;
 }
 h5{
-    margin-top: 5em;
+    margin-top: 2em;
     color: #fff;
 }
 li{
@@ -37,9 +37,7 @@ form{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: auto;
-    margin-right: auto;
-    position: relative;
+    margin: auto;
 
 }
 
@@ -59,25 +57,25 @@ textarea::placeholder{
     padding: 10px;   
 }
 
-.container {
+.contain {
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 7em;
-    position: relative;
+    margin-bottom: 3em;
     border: 1px solid silver;
     background-color: #003B6F;
     margin-top: 7em;
     width: 70%;
     border-radius: 7px;
-    padding: 7em 10em 7em 16em;
+  
 }
 
 button {
     display: flex;
     align-content: center;
-    font-size: 24px;
+    font-size: 17px;
     padding: 10px;
-    margin: 7vh 0em 0em 37vh;
+    margin: auto;
+    margin-top: 2EM;
     filter: drop-shadow(0 0 0.1em silver);
     border-radius: 10px;
 }
@@ -107,6 +105,7 @@ button:active {
     color: #fff;
     padding-right: 7em;
     margin-top: 2em;
+    
 }
 .labelFormLong{
     margin: 7em 0em 0em -30em;
@@ -134,6 +133,7 @@ button:active {
 .inline{
     display: inline-block;
 }
+
 
 
 
