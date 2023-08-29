@@ -1,61 +1,26 @@
 
   <div class="background-image">
-    
-    <h2><span class="ititle">I</span>T<span class="ititle">-</span>Training</h2>
+    <div class="titre-home">
+
+      <h2><span class="ititle">I</span>T<span class="ititle">-</span>Training</h2>
+    </div>
   </div>
-
-  
-
-  
 
   <div class="presentation">
 
     <h3>Trouvez la formation qui vous convient !</h3>
-
-    <div *ngFor="let formation of formations" class="card-formation">
-      <div class="card" style="width: 20rem;">
-        <img src="../../../assets/img/fuji.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <a routerLink="/formation/detail"><h5 class="card-text">{{formation.intituleFormation}}</h5></a>
+    <div class="card-grid">
+      <div *ngFor="let formation of formations" class="card-formation">
+        <div class="card" style="width: 20rem;">
+          <img src="../../../assets/img/fuji.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <a routerLink="/formation/detail"><h5 class="card-text">{{formation.intituleFormation}}</h5></a>
+          </div>
         </div>
       </div>
-      <!-- <div class="card" style="width: 20rem;">
-        <img src="../../../assets/img/fuji.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <a href=""><h5 class="card-text">React</h5></a>
-        </div>
-      </div>
-      <div class="card" style="width: 20rem;">
-        <img src="../../../assets/img/fuji.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <a href=""><h5 class="card-text">Angular</h5></a>
-        </div>
-      </div> -->
     </div>
-
-    <!-- <div class="card-formation">
-      <div class="card" style="width: 20rem;">
-        <img src="../../../assets/img/fuji.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <a href=""><h5 class="card-text">Linux</h5></a>
-        </div>
-      </div>
-      <div class="card" style="width: 20rem;">
-        <img src="../../../assets/img/fuji.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <a href=""><h5 class="card-text">Machine Learning</h5></a>
-        </div>
-      </div>
-      <div class="card" style="width: 20rem;">
-        <img src="../../../assets/img/fuji.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <a href=""><h5 class="card-text">Scrum Master</h5></a>
-        </div>
-      </div>
-    </div> -->
-
     <button class="btn-menu">
-      <a routerLink="">Choisissez une formation</a>
+      <a routerLink="">En voir d'avantage</a>
     </button>
 
   </div>

@@ -20,5 +20,7 @@ export class FormationService {
   getFormation(id: number): Observable<Formation>{
     return this.httpClient.get<Formation>(`${this.apiUrl}/formations/${id}`)
   }
-
+  searchFormationsByName(searchTerm: string | null): Observable<any> {
+    return this.httpClient.get(`${this.apiUrl}/formations/search/${searchTerm}`);
+  }
 }
