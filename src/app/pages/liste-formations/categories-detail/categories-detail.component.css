@@ -13,14 +13,10 @@
     align-items: center;
   }
   
-  .card-product img {
-    height: 100%;
-    width: 120px;
-    object-fit: cover;
-  }
+
   
   .card-product h2 {
-    font-size: 16px;
+    font-size: 20px;
     font-weight: bold;
     margin: 0;
   }
