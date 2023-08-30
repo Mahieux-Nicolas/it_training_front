@@ -11,10 +11,10 @@
     <h3>Trouvez la formation qui vous convient !</h3>
     <div class="card-grid">
       <div *ngFor="let categorie of categories; let i = index" class="card-formation">
-        <div class="card" style="width: 20rem;" *ngIf="i < 6">
-          <img src="../../../assets/img/fuji.jpg" class="card-img-top" alt="...">
+        <div class="card" style="width: 20rem;" *ngIf="i < 6" [routerLink]="'/categories/categorie/' + categorie.id">
+          <img [src]="categorie.image" class="card-img-top fixed-size-image" alt="...">
           <div class="card-body">
-            <a routerLink="/formation/detail"><h5 class="card-text">{{categorie.intitulerCategorie}}</h5></a>
+            <h5 class="card-text">{{categorie.intitulerCategorie}}</h5>
           </div>
         </div>
       </div>

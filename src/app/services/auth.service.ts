@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Client } from '../models/client.model';
+import { Router } from '@angular/router'; // Importez Router depuis '@angular/router'
 
 
 interface ConnexionResponse {
@@ -20,7 +21,7 @@ export class AuthService {
   private apiUrl = 'http://localhost:8080';
 
   // Injection de la dépendence HttpClient
-  constructor(private httpClient: HttpClient) { 
+  constructor(private httpClient: HttpClient, private router: Router) { 
   }
 
   connexion(email: String, password: String): Observable<ConnexionResponse> {
@@ -34,6 +35,13 @@ export class AuthService {
   // Simulate a logout action
   deconnexion() {
     this.isAuthenticated = false;
+
+    // Supprimez le token du localStorage
+    localStorage.removeItem('authToken');
+    localStorage.removeItem('authenticatedClient');
+
+    alert("User déconnecté");
+    this.router.navigate(['/user/connexion']);
   }
 
 

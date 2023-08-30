@@ -4,19 +4,21 @@
 <div class="container">   
     <div class="container-intro">       
       <div class="texte-formation">
+        <h3>Description: </h3>
         <p>
-          {{ categorie.description }}
           {{categorie.description}}
         </p>
       </div>
     </div>
     <div class="domaine-formations">
-        <h2>Formation inter / intra - {{categorie.intitulerCategorie}}</h2>
-        <div class="card-product"*ngFor="let formation of categorie.formations">
-            <div class="card-product-infos">
-              <h2 >{{formation.intituleFormation}}</h2>
-            </div>
-        </div>          
-    </div>
+        <h2>Formation inter / intra - {{categorie.intitulerCategorie}}: </h2>
+        <div class="liste-formation">
+            <div class="card-product"*ngFor="let formation of categorie.formations">
+                <div class="card-product-infos"[routerLink]="'/formations/formation/' + formation.id">
+                  <h2 >{{formation.intituleFormation}}</h2>
+                </div>
+            </div>          
 
+        </div>
+    </div>
 </div>

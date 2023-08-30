@@ -7,7 +7,9 @@ import { SessionFormation } from 'src/app/models/sessionFormation.model';
 import { SessionFormationService } from 'src/app/services/sessionFormation.service';
 import { AuthService } from 'src/app/services/auth.service';
 import { Client } from 'src/app/models/client.model';
-import { Router } from '@angular/router'; // Importez Router depuis '@angular/router'
+import { ActivatedRoute, Router } from '@angular/router'; // Importez Router depuis '@angular/router'
+import { Categorie } from 'src/app/models/categorie.model';
+import { CategorieService } from 'src/app/services/categorie.service';
 
 @Component({
   selector: 'app-detail-formation',
@@ -25,7 +27,10 @@ export class DetailFormationComponent {
     private authService: AuthService,
     private sessionFormationService: SessionFormationService,
     private clientService: ClientService,
-    private router: Router 
+    private formationService: FormationService,
+    private categorieService: CategorieService,
+    private router: Router,
+    private route: ActivatedRoute
   ) {}
 
     submitted: boolean = false;
@@ -33,6 +38,9 @@ export class DetailFormationComponent {
     selectedSessionPrix: number = 0; // Initialisez la propriété
     client : Client | null = null;
     sessionFormation : SessionFormation | null = null;
+    categorie! : Categorie;
+    formation! : Formation;
+
 
     ngOnInit(): void {
       this.sessionFormationService.getSessionFormations().subscribe((sessionFormations) => { this.sessionFormations = sessionFormations })     
@@ -47,6 +55,10 @@ export class DetailFormationComponent {
       } else {
         console.log("Token invalide ou non trouvé. Pas de récupération des informations du client.");
       }
+      const type = this.route.snapshot.paramMap.get('type');
+    console.log(type)
+    const id = this.route.snapshot.paramMap.get('id');
+    this.setSubscribe(type, id)
     }
 
   onSubmit() {
@@ -95,4 +107,17 @@ export class DetailFormationComponent {
      return this.submitted;
     }
   }
+  private findByFormationId(id: number): void {
+    this.formationService.getFormation(id).subscribe((formation) => {
+      this.formation = formation
+    });
+  }
+  private setSubscribe(type: string | null, id: string | null): void {
+    if (id && type === 'formation') {
+      this.findByFormationId(+id);
+    } else if (!id || !type) {
+      this.router.navigate(['/not-found']);
+    }
+  }
+  
 }

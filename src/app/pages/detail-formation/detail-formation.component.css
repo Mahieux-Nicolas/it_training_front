@@ -2,7 +2,7 @@
 
 /****** général */
 body{
-
+    
     font-family: 'Ubuntu', sans-serif;
 }
 li{
@@ -85,8 +85,13 @@ display: flex;
 justify-content:center;
 flex-direction: column;
     }
+h4{
+    margin-left: 10px;
 
-
+}
+.Presentation{
+    margin-left: 10px;
+}
 .btn.btn-primary, 
 .nav-link
 {
