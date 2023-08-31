@@ -1,10 +1,13 @@
-<h1>Mon DashBoard</h1>
+<div class="bandeau">
+<h1>Mon DashBoard </h1>
+  <button class="btn-menu" (click)="Deconnexion()">Deconnexion</button>
+</div>
 
 <div class="circle">
   <span class="initials">NM</span>
 </div>
 <p class="nom">{{client?.nom}} {{client?.prenom}}</p>
-<button>Deconnexion</button>
+
 <section class="dashboard">
   <section class="main_dash">
     <span class="demande">

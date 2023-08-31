@@ -56,7 +56,13 @@ a:visited{
 .card{
     display: inline-block;
     margin: 2em;
+    cursor: pointer;
 }
+.fixed-size-image {
+    width: 100%; /* Largeur à 100% pour remplir la largeur de la carte */
+    height: 200px; /* Hauteur fixe souhaitée */
+    object-fit: cover; /* Assurez-vous que l'image remplit la zone sans déformation */
+  }
 
 .card-text{
     text-align: center;
@@ -133,12 +139,11 @@ a:visited{
     border-radius: 5px;
 }
 .card-grid{
-    padding: 1em;
-    padding-bottom: 50px;
+
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(315px, 1fr));
-    grid-gap: 10px
+    grid-template-columns: 1fr 1fr 1fr;
   }
+ 
 
 
   @keyframes gradient {

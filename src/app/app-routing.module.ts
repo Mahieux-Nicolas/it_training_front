@@ -25,7 +25,6 @@ const routes: Routes = [
 
   { path: '', redirectTo: 'home', pathMatch: 'full'},
   { path: '', component: HomeComponent},
-  { path: 'formation/detail', component: DetailFormationComponent },
   { path: 'user/dashboard', component: DashboardComponent, canActivate: [GuardienAuth]  },
 
   { path: 'formation/inscription-formation', component: FormInscrtiptionFormationComponent },
@@ -38,10 +37,11 @@ const routes: Routes = [
   { path: 'evaluation-formateur', component: EvaluationFormateurComponent},
 
  
-  {path : 'contact', component: ProjetFormationComponent},
-  {path : 'categorie', component: ListeFormationsComponent},
-  {path: 'categories/:type', component: CategoriesDetailComponent},
-  {path: 'categories/:type/:id', component: CategoriesDetailComponent}
+  { path : 'contact', component: ProjetFormationComponent},
+  { path : 'categorie', component: ListeFormationsComponent},
+  { path: 'categories/:type', component: CategoriesDetailComponent},
+  { path: 'categories/:type/:id', component: CategoriesDetailComponent},
+  { path: 'formations/:type/:id', component: DetailFormationComponent }
 
 
 ];

@@ -24,6 +24,10 @@ export class DashboardComponent {
   sessionFormations: SessionFormation [] = []
   sessionFormation : SessionFormation | null = null;
 
+  Deconnexion() : void {
+    this.authService.deconnexion();
+    
+  }
   ngOnInit(): void {
     
     this.sessionFormationService.getSessionFormations().subscribe((sessionFormations) => { this.sessionFormations = sessionFormations })     

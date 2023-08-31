@@ -42,13 +42,17 @@
   scrollbar-width: thin;
 }
 
-h1{
+.bandeau{
   text-align: center;
   background-color:#003B6F;
   color: white;
+  display: flex;
+  justify-content: space-between;
 
 }
-
+.bandeau h1{
+  margin-left: 604px;
+}
 .nom{
   text-align: center;
 
@@ -124,7 +128,7 @@ text-align: center;
 
 background-color: aliceblue;
 height: 30vh;
-margin: 2em auto;
+margin: 2em;
 padding: 1em;
 border-radius: 1em;
 overflow-y: scroll;
@@ -135,3 +139,21 @@ flex-direction: column; /* Ajout : Aligner les éléments verticalement */
 align-items: left; /* Ajout : Centrer horizontalement les éléments */
 }
 
+.btn-menu{
+  border-radius: 2em;
+  padding: 10px;
+  margin: 1px;
+
+  border: none;
+  background:  #fff;
+  color: #197D8F;
+  opacity: 1;
+}
+
+.btn-menu a{
+  color: #197D8F;
+}
+
+.btn-menu:hover {
+  opacity: 0.7;
+}

@@ -49,12 +49,11 @@ export class FormConnexionComponent {
         this.authService.connexion(email, password).subscribe(
           (result) => {
             if (result.client) {
-              console.log("YES");
               this.authService.Authentification(result.client);
               this.authService.setAuthenticatedClient(result.client);
               this.router.navigate(['/user/dashboard']);
             } else {
-              console.log("Échec de la connexion");
+              alert("Échec de la connexion");
             }
           },
           error => {
